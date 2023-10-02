@@ -19,5 +19,8 @@ public class ApiDemosHomeScreen {
     public WebElement apiDemosTitle;
     @AndroidFindBy(accessibility = "Preference")
     public WebElement preferenceButton;
+    @AndroidFindBy(accessibility = "Views")
+    public WebElement viewsButton;
+
 
 }

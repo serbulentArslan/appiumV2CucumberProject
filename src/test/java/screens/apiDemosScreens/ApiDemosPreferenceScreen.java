@@ -16,5 +16,8 @@ public class ApiDemosPreferenceScreen {
 
     @AndroidFindBy(accessibility = "3. Preference dependencies")
     public WebElement preferenceDemendenciesButton;
+    @AndroidFindBy(accessibility = "9. Switch")
+    public WebElement switchButton;
+
 
 }

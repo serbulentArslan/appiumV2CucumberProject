@@ -9,6 +9,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class Driver {
+    private Driver(){
+
+    }
 
     private static AndroidDriver driver;
 
@@ -19,7 +22,7 @@ public class Driver {
     private static final String appPackage = ConfigReader.getProperty("appPackage");
     private static final String appActivity = ConfigReader.getProperty("appActivity");
 
-    public static AndroidDriver getDriver(){
+    public static AndroidDriver getDriver() {
 
         UiAutomator2Options options = new UiAutomator2Options();
         options.setPlatformName(platformName);
@@ -31,14 +34,14 @@ public class Driver {
 
 
         try {
-            driver = new AndroidDriver(new URL("http://127.0.0.1:4723"),options);
+            driver = new AndroidDriver(new URL("http://127.0.0.1:4723"), options);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }
         return driver;
     }
 
-    public static void quitDriver(){
+    public static void quitDriver() {
         if (driver != null){
             driver.quit();
             driver = null;
